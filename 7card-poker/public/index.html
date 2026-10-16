@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>둘만의 7장 포커</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="eyebrow">PRIVATE 2-PLAYER GAME</div>
+      <h1>둘만의 <span>7장 포커</span></h1>
+      <p class="sub">베팅 없이 카드 7장으로 승부 · 30초 후 자동 공개</p>
+    </header>
+
+    <section id="entry" class="panel">
+      <label for="playerName">내 닉네임</label>
+      <input id="playerName" maxlength="18" placeholder="예: 영우" autocomplete="nickname">
+      <div class="entry-actions">
+        <button id="createBtn" class="primary">새 게임 만들기</button>
+      </div>
+      <div class="join-row">
+        <input id="roomCode" maxlength="5" placeholder="친구의 방 코드" autocapitalize="characters">
+        <button id="joinBtn">방 입장</button>
+      </div>
+      <p class="hint">방을 만든 뒤 표시되는 코드를 친구에게 카톡으로 보내세요.</p>
+    </section>
+
+    <section id="lobby" class="panel hidden">
+      <div class="room-line"><span>방 코드</span><strong id="roomCodeLabel">-----</strong><button id="copyBtn" class="small">코드 복사</button></div>
+      <p id="lobbyMessage">친구가 입장하기를 기다리는 중...</p>
+      <div id="players" class="players"></div>
+      <p class="hint">상대방과 같은 방 코드로 접속해야 합니다.</p>
+    </section>
+
+    <section id="game" class="panel hidden">
+      <div class="game-top">
+        <div><div class="eyebrow">ROUND <span id="roundNum">1</span></div><h2 id="gameTitle">내 카드</h2></div>
+        <div class="timer-wrap"><span id="timer">30</span><small>초 후 공개</small></div>
+      </div>
+      <p id="gameMessage" class="game-message">내 카드 7장을 확인하세요. 30초 후 자동으로 공개됩니다.</p>
+      <div id="myCards" class="cards"></div>
+      <div id="result" class="result hidden"></div>
+      <div id="opponentArea" class="opponent-area hidden">
+        <h3 id="opponentTitle">상대방 카드</h3>
+        <div id="opponentCards" class="cards"></div>
+      </div>
+      <button id="againBtn" class="primary hidden">다시 한 판</button>
+    </section>
+
+    <footer>52장 덱 · 중복 없는 무작위 배분 · 서버에서 족보 판정</footer>
+    <div id="toast" class="toast hidden" role="status"></div>
+  </main>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/client.js"></script>
+</body>
+</html>
