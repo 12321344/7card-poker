@@ -1,0 +1,53 @@
+:root{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#f5f7f5;background:#0d1714;font-synthesis:none}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at top,#17372c 0%,#0d1714 55%);padding:28px 16px}
+.app{max-width:760px;margin:0 auto}
+header{text-align:center;margin:12px 0 26px}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:.17em;color:#9bc6ad}
+h1{font-size:clamp(28px,6vw,42px);margin:10px 0;color:#fff;letter-spacing:-.04em}
+h1 span{color:#a6e2bb}
+.sub{margin:0;color:#b8c8c0;font-size:14px}
+.panel{background:rgba(19,38,31,.94);border:1px solid #2c4c3d;border-radius:20px;padding:24px;box-shadow:0 18px 60px #0003}
+label{display:block;font-size:13px;color:#b9cec3;margin-bottom:8px}
+input{width:100%;background:#0c1a14;color:white;border:1px solid #355846;border-radius:11px;padding:13px 14px;font-size:15px;outline:none;min-width:0}
+input:focus{border-color:#a6e2bb}
+button{border:1px solid #436954;background:#1c382b;color:#effff4;border-radius:11px;padding:12px 16px;font-size:14px;font-weight:750;cursor:pointer;white-space:nowrap}
+button:hover{filter:brightness(1.12)}
+button:disabled{opacity:.45;cursor:not-allowed}
+button.primary{background:#b6edc7;color:#0b2115;border-color:#b6edc7}
+.entry-actions{margin-top:12px}
+.entry-actions button{width:100%}
+.join-row{display:flex;gap:8px;margin-top:10px}
+.hint{color:#91a99b;font-size:12px;line-height:1.5;margin:13px 0 0}
+.hidden{display:none!important}
+.room-line{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.room-line span{color:#a8bdb1;font-size:13px}
+.room-line strong{font-size:25px;letter-spacing:.16em;color:#b6edc7}
+button.small{padding:8px 10px;font-size:12px}
+#lobbyMessage{color:#d7e8dd;margin:22px 0 14px}
+.players{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.player{padding:13px;border-radius:12px;background:#0c1b14;border:1px solid #294738}
+.player strong{display:block;margin-bottom:5px}
+.player span{font-size:12px;color:#9bc6ad}
+.game-top{display:flex;align-items:center;justify-content:space-between;gap:16px}
+h2{margin:6px 0 0;font-size:24px}
+.timer-wrap{display:flex;align-items:center;gap:8px;background:#0b1b13;border:1px solid #315641;border-radius:13px;padding:8px 12px}
+.timer-wrap span{font-size:28px;font-weight:850;color:#b6edc7;font-variant-numeric:tabular-nums}
+.timer-wrap small{font-size:11px;color:#a8bdb1;max-width:42px}
+.game-message{color:#c0d4c8;font-size:14px;line-height:1.5;margin:18px 0}
+.cards{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px}
+.card{aspect-ratio:2/3;display:flex;flex-direction:column;justify-content:space-between;background:#f9fbf7;color:#14251c;border-radius:9px;padding:7px 5px;box-shadow:0 5px 12px #0003;min-width:0}
+.card.red{color:#c33142}
+.card .rank{font-size:clamp(13px,2.6vw,22px);font-weight:850;line-height:1}
+.card .suit{font-size:clamp(16px,3vw,25px);align-self:center}
+.card .bottom{transform:rotate(180deg);align-self:flex-end}
+.card.back{background:repeating-linear-gradient(45deg,#244f3b,#244f3b 5px,#1a3a2b 5px,#1a3a2b 10px);border:2px solid #b6edc7;color:#b6edc7;align-items:center;justify-content:center;font-size:22px}
+.opponent-area{margin-top:26px;border-top:1px solid #2d4d3d;padding-top:20px}
+h3{font-size:16px;margin:0 0 14px}
+.result{margin-top:22px;padding:17px;border:1px solid #4e8062;background:#10271a;border-radius:14px;text-align:center}
+.result strong{font-size:23px;color:#b6edc7;display:block;margin-bottom:7px}
+.result p{margin:5px 0;color:#d0e4d7;font-size:13px}
+#againBtn{width:100%;margin-top:18px}
+footer{text-align:center;color:#6f8a7a;font-size:11px;margin:22px 0}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#e4f9ea;color:#12301e;padding:12px 18px;border-radius:12px;font-size:13px;font-weight:700;box-shadow:0 8px 30px #0005;max-width:calc(100vw - 32px)}
+@media(max-width:520px){body{padding:20px 10px}.panel{padding:16px}.cards{gap:4px}.card{padding:5px 3px;border-radius:6px}.room-line strong{font-size:22px}.game-top{align-items:flex-start}.timer-wrap{padding:6px 8px}.timer-wrap span{font-size:24px}}
